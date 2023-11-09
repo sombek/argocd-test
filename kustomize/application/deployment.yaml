@@ -5,7 +5,6 @@ metadata:
   namespace: example
   labels:
     app: example-app
-  annotations:
 spec:
   selector:
     matchLabels:
@@ -23,14 +22,7 @@ spec:
     spec:
       containers:
       - name: example-app
-        image: aimvector/python:1.0.0
+        image: nginx:latest
         imagePullPolicy: Always
         ports:
-        - containerPort: 5000
-        volumeMounts:
-        - name: config-volume
-          mountPath: /configs/
-      volumes:
-      - name: config-volume
-        configMap:
-          name: example-config
+        - containerPort: 80
