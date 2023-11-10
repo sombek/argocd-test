@@ -1,6 +1,0 @@
-versions:
-  examples:
-    guestbook:
-      gitRepo: HEAD
-    helloKubernetes:
-      gitRepo: HEAD
